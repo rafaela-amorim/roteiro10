@@ -2,6 +2,8 @@ package adt.bst;
 
 import static org.junit.Assert.*;
 
+import java.util.Arrays;
+
 import org.junit.Before;
 import org.junit.Test;
 
@@ -80,7 +82,7 @@ public class StudentBSTTest {
 	public void testSucessorPredecessor() {
 
 		fillTree(); // -40 -34 0 2 5 6 9 12 23 67 76 232
-
+		
 		assertEquals(null, tree.predecessor(-40));
 		assertEquals(new Integer(-34), tree.sucessor(-40).getData());
 
