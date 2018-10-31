@@ -100,6 +100,13 @@ public class BSTImplTest {
 		assertEquals((Integer) 18, tree.sucessor((Integer) 9).getData());
 		assertEquals((Integer) 18, tree.predecessor((Integer) 22).getData());
 		
+		tree.insert((Integer) 9);
+		assertEquals((Integer) 9, tree.sucessor((Integer) 9).getData());
+		assertNull(tree.predecessor((Integer) 9));
+		
+		Integer[] array = new Integer[] { 18, 9, 9, 22 };
+		assertArrayEquals(array, tree.preOrder());
+		
 		assertNull(tree.predecessor(null));
 		assertNull(tree.sucessor(null));
 	}
